@@ -50,6 +50,7 @@ h1 {
     text-transform: uppercase;
     letter-spacing: -8px;
     margin-bottom: 20px;
+    text-shadow: 0px 5px 20px rgb(0 0 0 / 62%);
 }
 
 a {
@@ -95,7 +96,11 @@ button:hover {
 /* general page elements */
 
 #page-content-wrapper {
-    padding: 50px;
+    padding: 122px 30px 60px 30px;
+    max-width: 1060px;
+    margin: 0 auto;
+    /* we give this container a position relative so it's children elements which are positioned absolute, use it as a reference */
+    position: relative;
 }
 
 /* ----- navbar ----- */
@@ -105,6 +110,9 @@ nav {
     margin-bottom: 20px;
     color: white;
     padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    z-index: 99;
 }
 
 nav i {
@@ -135,28 +143,59 @@ nav i {
 
 /* ----- homepage (index) ----- */
 
+/* hero */
+
 #hero {
-    padding: 30px;
+    color: white;
+    padding: 80px;
     border-radius: 30px;
     margin-bottom: 40px;
     text-align: center;
+    background-image: url("../img/hero-bg.jpg");
+    background-position: 65% 50%;
 }
+
+#hero p {
+    font-size: 28px;
+    text-shadow: 0px 5px 20px rgb(0 0 0 / 62%);
+}
+
+#small-star-hero {
+    position: absolute;
+    top: 78px;
+    right: -26px;
+    width: 118px;
+}
+
+/* welcome section */
 
 #welcome-section {
     background: #fff5e5;
     padding: 30px;
     margin-bottom: 30px;
+    border-radius: 15px;
+    /* set up this welcome section as a reference, for our star */
+    position: relative;
 }
 
 #seahorse-image {
     width: 30%;
     display: block;
     margin: 0 0 0 auto;
+    border-radius: 5px;
 }
 
 .item {
     width: 50%;
 }
+
+#welcome-stars {
+    position: absolute;
+    bottom: -37px;
+    left: -56px;
+}
+
+/* footer */
 
 footer {
     padding: 30px;
